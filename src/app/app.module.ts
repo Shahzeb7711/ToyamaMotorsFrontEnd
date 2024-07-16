@@ -57,6 +57,7 @@ import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ContactComponent } from './contact/contact.component';
+import { createPopper } from '@popperjs/core';
 
 export function HttpLoaderFactory(http:HttpClient) {
   return new TranslateHttpLoader(http)

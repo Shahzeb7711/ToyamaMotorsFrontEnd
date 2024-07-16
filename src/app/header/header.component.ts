@@ -7,6 +7,7 @@ import { Product } from '../_model/product.model';
 import { ShowProductDetailsComponent } from '../show-product-details/show-product-details.component';
 import { ShowActivatedDeatilsComponent } from '../show-activated-deatils/show-activated-deatils.component';
 import { TranslateService } from '@ngx-translate/core';
+import { createPopper } from '@popperjs/core';
 
 @Component({
   selector: 'app-header',
