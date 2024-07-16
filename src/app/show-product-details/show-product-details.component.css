@@ -1,0 +1,9 @@
+.card {
+    border: #DB162F solid 0.5px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.form-card  {
+    padding: 30px;
+}

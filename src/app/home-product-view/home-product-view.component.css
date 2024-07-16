@@ -1,0 +1,167 @@
+.card {
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.thumbnail-card {
+    /* padding: 0; */
+    margin: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail-card:hover {
+    /* border-color: #9ca1a6; */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail-image {
+    width: 200px;
+    /* height: auto; */
+    border-radius: 5px;
+    padding: 0;
+}
+
+.images-container {
+    display: flex;
+    flex-direction: row; /* Display images vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    /* margin-top: 20px; */
+    
+}
+
+
+.text-area {
+    padding: 20px;
+    /* background-color: #f8f9fa; */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.similar-product .card {
+    margin-top: 20px;
+    height: 200px;
+}
+
+.product-name {
+    font-size: 30px;
+}
+
+.desc-text {
+    font-weight: 500;
+}
+
+.price {
+    font-weight: 500;
+    font-size: larger;
+    display: flex;
+    flex-direction: row; /* Display images vertically */
+    align-items: flex-start;
+}
+
+.desc-text-price {
+    font-size: 20px;
+}
+
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .card-similar-products {
+    margin: 10px; /* Add margin between cards */
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .carousel {
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+  }
+  
+  .card-deck {
+    
+    display: flex;
+    
+  }
+
+  .car-card {
+    margin: 15px;
+  }
+
+ .carousel-container {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-item {
+  display: flex;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.thumbnail-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.thumbnail-slide {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
+
+.thumbnail-image {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+.thumbnail-slide.active .thumbnail-image {
+    transform: scale(1.2); /* Increase size of active thumbnail */
+}

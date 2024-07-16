@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="card-container">
+      <div class="card" style="width: 18rem;" *ngFor="let p of searchResults">
+        <img [src]="p.imageResponse[0].url" alt="img" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h3 class="card-title">{{p.makeName}} {{p.productName}}</h3>
+          <p class="card-text">
+            Type : {{p.bodyType}}
+            <br>
+            Color: {{p.color}}
+          </p>
+          <button (click)="showProductDetails(p.productId)" class="btn btn-danger">See Price</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!searchResults || searchResults.length === 0">
+        <h2>No results found for "{{ searchKeyword }}"</h2>
+      </div>
+  </div>

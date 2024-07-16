@@ -1,0 +1,39 @@
+<div class="container mt-5 ">
+    <div class="card p-2">
+
+        <div class="row">
+            <div class="col-6">
+                <form #fuelForm="ngForm" (ngSubmit)="addFuel(fuelForm)" class="form-card">
+                    <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                        <mat-label>Fuel Type</mat-label>
+                        <input matInput placeholder="Fuel Type name" [(ngModel)]="fuel.fuelTypeName" name="fuelTypeName">
+                    </mat-form-field>
+
+                    <div align="end">
+                        <button type="submit" mat-raised-button color="warn" class="m-1">Add Fuel Type</button>
+                        <!-- <button type="reset" mat-raised-button color="primary">Clear</button> -->
+                    </div>
+                </form>
+            </div>
+            </div>
+            </div>
+            <div class="container-fluid mt-5">
+                <div class="card">
+                    <table mat-table [dataSource]="fuelDetails">
+
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="id">
+                            <th mat-header-cell *matHeaderCellDef> Fuel Type ID </th>
+                            <td mat-cell *matCellDef="let element"> {{element.fuelTypeId}} </td>
+                        </ng-container>
+
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef> Fuel Type </th>
+                            <td mat-cell *matCellDef="let element"> {{element.fuelTypeName}} </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+            </div>

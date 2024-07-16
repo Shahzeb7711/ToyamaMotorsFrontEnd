@@ -1,0 +1,54 @@
+<div class="container mt-5 ">
+    <div align="center" class="mainHeading">
+        <h1>Create your account and lets be friends!!!</h1>
+    </div>
+    <div class="card p-2">
+
+        <!-- <div class="row">
+            <div class="col-6"> -->
+       
+        <form #userForm="ngForm" (ngSubmit)="createUser(userForm)" class="form-card">
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>User Name</mat-label>
+                <input matInput placeholder="username" [(ngModel)]="user.username" name="username">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="email" [(ngModel)]="user.email" name="email" type="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="password" [(ngModel)]="user.password" name="password" type="password">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Mobile no.</mat-label>
+                <input matInput placeholder="Mobile No." [(ngModel)]="user.mobileNo" name="mobileNo" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Phone no.</mat-label>
+                <input matInput placeholder="Phone No." [(ngModel)]="user.phoneNo" name="phoneNo">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Fax</mat-label>
+                <input matInput placeholder="Fax" [(ngModel)]="user.fax" name="fax">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Address" [(ngModel)]="user.address" name="address">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Country</mat-label>
+                <input matInput placeholder="Country name" [(ngModel)]="user.country" name="country">
+            </mat-form-field>
+
+
+            <div align="end">
+                <button type="submit" class="m-1 btn all-cars-btn">SignUp</button>
+                <!-- <button type="reset" mat-raised-button color="accent">Clear</button> -->
+            </div>
+        </form>
+    </div>
+    <!-- <div class="btn all-cars-btn mt-3">
+        <a (click)="loginRouter()">Login</a>
+    </div> -->
+</div>

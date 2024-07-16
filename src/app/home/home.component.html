@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <div id="google_translate_element"></div>
+  <section class="home" id="home">
+    <div class="home-text">
+      <h1>{{'HomeText' | translate}}<span>{{'Motors' | translate}}</span></h1>
+      <p><span>{{'Experience' | translate}}</span>{{'automotive perfection with' | translate}}<br>{{'Toyama Motors' | translate}}<br>{{'where' | translate}}<span>{{'precision' | translate}}</span>{{'meets passion on every road.' | translate}}</p>
+      <a href="#" class="btn">{{'Discover Now' | translate}}</a>
+    </div>
+    <div class="home-img">
+      <!-- Your image tag here -->
+      <!-- <img src="assets/NewBGWallpapper.png" alt="Car Image" class="img-fluid"> -->
+    </div>
+  </section>
+
+  <section>
+    <div class="heading">
+      <span>{{'All Cars'| translate}}</span>
+      <h2>{{'Look' | translate}}</h2>
+    </div>
+    <!--  -->
+    <!-- <div class="card content-container"> -->
+    <div class="card-container">
+      <div class="card" style="width: 18rem;" *ngFor="let p of productDetails.slice(0, 3)  ">
+        <img [src]="p.imageResponse[0].url" alt="img" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h3 class="card-title">{{p.makeName}} {{p.productName}}</h3>
+          <p class="card-text">
+            {{'Type' | translate}}{{p.bodyType}}
+            <br>
+            {{'Color' | translate}}{{p.color}}
+          </p>
+          <a (click)="showProductDetails(p.productId)" class="btn btn-danger">{{'price button' | translate}}</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="btn all-cars-btn" (click)="showAllCars()">
+      <a>{{'All cars button' | translate}}</a>
+    </div>
+  </section>
+<hr>
+  <section>
+    <section class="about mt-10" id="about">
+      <div class="about-image">
+        <img src="assets/Gray-Lexus-Transparent.png" alt="" class="img-fluid">
+      </div>
+      <div class="about-text">
+        <span>{{'About heading' | translate}}</span>
+        <h2>{{'About l1' |translate}} <br>{{'About l2' |translate}}</h2>
+        <p>
+          {{'About l3' |translate}}
+          <br>
+          <br>
+          {{'About l4' |translate}}
+          <br>
+          <br>
+          {{'About l5' |translate}}
+          <br>
+          <br>
+          <a (click)="showAllAboutUs()" class="btn">Know more</a>
+      </div>
+    </section>
+  </section>
+  <section>
+    <div class="heading">
+      <span>{{'Our Blogs' | translate}}</span>
+      <h2>{{'Have a look' | translate}}</h2>
+    </div>
+    <!-- <div class="card content-container"> -->
+    <div class="card-container">
+      <div class="card" style="width: 18rem;" *ngFor="let b of blogDetails">
+        <img [src]="b.imageResponse[0].url" alt="img" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h3 class="card-title"> {{b.blogTitle}}</h3>
+          <p class="card-text">
+            {{b.blogName}}
+          </p>
+          <a (click)="showBlogDetails(b.blogId)" class="btn btn-danger">{{'See more' | translate}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="btn all-cars-btn" (click)="showAllBlogs()">
+      <a>{{'All Blogs' | translate}}</a>
+    </div>
+  </section>
+</div>
+<!-- </div> -->
+

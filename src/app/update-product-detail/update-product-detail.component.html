@@ -1,0 +1,440 @@
+<!-- <div class="container mt-5 ">
+    <div class="card p-2">
+
+        <div class="row"> -->
+<!-- <div class="col-6"> -->
+<!-- <form #productForm="ngForm" (ngSubmit)="updateProductDetails(productForm)">
+                <h1>Add Details</h1> -->
+<!-- <h2>Vehicle Description</h2> -->
+<!-- <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Company Name</mat-label>
+                    <input matInput placeholder="Company Name" [(ngModel)]="product.makeName" name="makeName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Car name</mat-label>
+                    <input matInput placeholder="Car name" [(ngModel)]="product.productName" name="productName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Car type</mat-label>
+                    <input matInput placeholder="Car type" [(ngModel)]="product.productType" name="productType">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Actual Price</mat-label>
+                    <input matInput placeholder="Actual Price" [(ngModel)]="product.productActualPrice"
+                        name="productActualPrice">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Discounted Price</mat-label>
+                    <input matInput placeholder="Discounted Price" [(ngModel)]="product.productDiscountedPrice"
+                        name="productDiscountedPrice">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 2">
+                    <mat-label>Year of Manufature</mat-label>
+                    <input matInput placeholder="Year of Manufature" [(ngModel)]="product.yearOfManufacture"
+                        name="yearOfManufacture">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 2">
+                    <mat-label>Milage</mat-label>
+                    <input matInput placeholder="Milage" [(ngModel)]="product.mileage" name="milage">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Seater</mat-label>
+                    <input matInput placeholder="Seater" [(ngModel)]="product.seater" name="Seater">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 2">
+                    <mat-label>Engine Type</mat-label>
+                    <input matInput placeholder="Engine Type" [(ngModel)]="product.engineType" name="engineType">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 2">
+                    <mat-label>Engine Horse Power</mat-label>
+                    <input matInput placeholder="Engine Horse Power" [(ngModel)]="product.engineHorsePower"
+                        name="engineHorsePower">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 2">
+                    <mat-label>Transmission</mat-label>
+                    <input matInput placeholder="Transmission" [(ngModel)]="product.transmission" name="transmission">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 2">
+                    <mat-label>Fuel Type</mat-label>
+                    <input matInput placeholder="Fuel Type" [(ngModel)]="product.fuelType" name="fuelType">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Trunk Capacity</mat-label>
+                    <input matInput placeholder="Trunk Capacity" [(ngModel)]="product.capacity" name="trunkCapacity">
+                </mat-form-field>
+
+
+                <div class="radioButtons" *ngIf="currentStep === 3">
+                    <div class="card">
+                        <mat-label class="radio-mat-lable">Infotainment System</mat-label>
+                        <mat-radio-group class="radio-group-section" [(ngModel)]="product.isinfotainmentSystem"
+                            name="isinfotainmentSystem">
+                            <mat-radio-button value="true">Yes</mat-radio-button>
+                            <mat-radio-button value="false">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+                <div class="radioButtons" *ngIf="currentStep === 3">
+                    <div class="card">
+                        <mat-label class="radio-mat-lable">Climate Control</mat-label>
+                        <mat-radio-group class="radio-group-section" [(ngModel)]="product.isclimateControl"
+                            name="isinfotainmentSystem">
+                            <mat-radio-button value="true">Yes</mat-radio-button>
+                            <mat-radio-button value="false">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div> -->
+
+
+
+<!-- <mat-form-field>
+                        <mat-label>Select</mat-label>
+                        <mat-select>
+                          <mat-option value="one">First option</mat-option>
+                          <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                      </mat-form-field> -->
+<!-- <div class="radioButtons" *ngIf="currentStep === 3">
+                    <div class="card">
+                        <mat-label class="radio-mat-lable">Sunroof</mat-label>
+                        <mat-radio-group class="radio-group-section" [(ngModel)]="product.isSunroof" name="isSunroof">
+                            <mat-radio-button value="true">Yes</mat-radio-button>
+                            <mat-radio-button value="false">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 4">
+                    <mat-label>Extra Features</mat-label>
+                    <textarea matInput placeholder="Extra Features" [(ngModel)]="product.extraFeature"
+                        name="extraFeature"></textarea>
+                        <mat-hint>Keep it under 1000 letters</mat-hint>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Color</mat-label>
+                    <input matInput placeholder="Color" [(ngModel)]="product.color" name="color">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Body Type</mat-label>
+                    <input matInput placeholder="Body Type" [(ngModel)]="product.bodyType" name="bodyType">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Wheels Type</mat-label>
+                    <input matInput placeholder="Wheels Type" [(ngModel)]="product.wheels" name="wheels">
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 1">
+                    <mat-label>Lights Condition</mat-label>
+                    <input matInput placeholder="Lights Condition" [(ngModel)]="product.lighting" name="lighting">
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-100" *ngIf="currentStep === 4">
+                    <mat-label>Overall Condition</mat-label>
+                    <textarea matInput placeholder="Overall Condition" [(ngModel)]="product.overallCondition"
+                        name="overallCondition"></textarea>
+                        <mat-hint>Keep it under 1000 letters</mat-hint>
+                </mat-form-field>
+
+                <div *ngIf="currentStep === 5">
+
+                        <div class="dropzone" appDrag (files)="fileDropped($event)" >
+                            <div class="text-wrapper">
+                                <div class="centered">
+                                    Drag and drop or <a (click)="selectFile.click()" class="anchor-browse">browse</a> a file
+                                </div>
+                            </div>
+                        </div>
+    
+                        <input type="file" multiple value="select" #selectFile (change)="onFileSected($event)"
+                            class="hide-element">
+                    </div>
+                    <div class="mt-5">
+                        <div class="row">
+                            <mat-grid-list cols="4" rowHeight="1:1">
+                                <mat-grid-tile *ngFor="let file of product.imageResponse; let i = index">
+                                    <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                                    <img [src]="file.url" width="100px" height="100px">
+                                </mat-grid-tile>
+    
+                            </mat-grid-list>
+                        </div>
+    
+                    </div> -->
+
+<!-- Step 5: Image Upload -->
+<!-- <div *ngIf="currentStep === 5">
+                    <div class="dropzone" appDrag (files)="fileDropped($event)">
+                        <div class="text-wrapper">
+                            <div class="centered">
+                                Drag and drop or <a (click)="selectFile.click()" class="anchor-browse">browse</a> a file
+                            </div>
+                        </div>
+                    </div>
+                    <input type="file" multiple value="select" #selectFile (change)="onFileSected($event)"
+                        class="hide-element">
+                </div>
+                <div class="mt-5" *ngIf="currentStep === 5">
+                    <div class="row">
+                        <mat-grid-list cols="4" rowHeight="1:1">
+                            <mat-grid-tile *ngFor="let file of product.imageResponse; let i = index">
+                                <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                                <img [src]="file.url" width="100px" height="100px">
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                    </div>
+                </div> -->
+
+<!-- Step 5: Image Upload -->
+<!-- <div *ngIf="currentStep === 5">
+    Display saved images 
+    <div class="mt-5">
+        <div class="row">
+            <mat-grid-list cols="4" rowHeight="1:1">
+                <mat-grid-tile *ngFor="let file of savedImages; let i = index">
+                    <img [src]="file.url" width="100px" height="100px">
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+    
+     Add new images 
+    <div class="dropzone" appDrag (files)="fileDropped($event)">
+        <div class="text-wrapper">
+            <div class="centered">
+                Drag and drop or <a (click)="selectFile.click()" class="anchor-browse">browse</a> a file
+            </div>
+        </div>
+    </div>
+    <input type="file" multiple value="select" #selectFile (change)="onFileSected($event)" class="hide-element">
+</div> -->
+
+
+<!-- <div div align="end">
+                    <button mat-raised-button color="primary" *ngIf="currentStep > 1" (click)="prevStep()"
+                        class="m-1">Previous</button>
+                    <button mat-raised-button color="primary" *ngIf="currentStep < maxStep"
+                        (click)="nextStep()">Next</button>
+                </div>
+
+                
+
+                <div align="end" *ngIf="currentStep === maxStep">
+                    <button type="submit" mat-raised-button color="primary" class="m-1">Add Product</button>
+                    <button type="reset" mat-raised-button color="primary">Clear</button>
+                </div>
+            </form>
+        </div>
+        
+
+    </div>
+
+
+</div>
+</div> -->
+
+<div class="container mt-5 ">
+    <div class="card p-2">
+
+        <div class="row">
+
+            <form #productForm="ngForm" (ngSubmit)="updateProductDetails(productForm)" class="form-card">
+                <h1 class="text-center">Update Details</h1>
+
+
+                <ng-template matStepLabel>Vehicle Description</ng-template>
+                <mat-form-field class="w-100">
+                    <mat-label>Select Company</mat-label>
+                    <mat-select placeholder="Company Name" [(ngModel)]="product.makeName" name="makeName">
+                        <mat-option *ngFor="let make of makeDetails" [value]="make.makeName">{{ make.makeName
+                            }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Car name</mat-label>
+                    <input matInput placeholder="Car name" [(ngModel)]="product.productName" name="productName">
+                </mat-form-field>
+
+
+                <mat-form-field class="w-100">
+                    <mat-label>Select Body Type</mat-label>
+                    <mat-select placeholder="Body Type" [(ngModel)]="product.bodyType" name="bodyType">
+                        <mat-option *ngFor="let bodyType of bodyTypeDetails" [value]="bodyType.bodyTypeName">{{
+                            bodyType.bodyTypeName }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Actual Price</mat-label>
+                    <input matInput placeholder="Actual Price" [(ngModel)]="product.productActualPrice"
+                        name="productActualPrice">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Discounted Price</mat-label>
+                    <input matInput placeholder="Discounted Price" [(ngModel)]="product.productDiscountedPrice"
+                        name="productDiscountedPrice">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Vehicle Description</mat-label>
+                    <textarea matInput placeholder="Product Description" [(ngModel)]="product.productDescription"
+                        name="productDescription"></textarea>
+                    <mat-hint>Keep it under 1000 letters</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Seater</mat-label>
+                    <input matInput placeholder="Seater" [(ngModel)]="product.seater" name="Seater">
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Select Fuel Type</mat-label>
+                    <mat-select placeholder="Fuel Type" [(ngModel)]="product.fuelType" name="fuelType">
+                        <mat-option *ngFor="let fuel of fuelDetails" [value]="fuel.fuelTypeName">{{
+                            fuel.fuelTypeName }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Year of Manufature</mat-label>
+                    <input matInput placeholder="Year of Manufature" [(ngModel)]="product.yearOfManufacture"
+                        name="yearOfManufacture">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Milage</mat-label>
+                    <input matInput placeholder="Milage" [(ngModel)]="product.mileage" name="milage">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Engine Type</mat-label>
+                    <input matInput placeholder="Engine Type" [(ngModel)]="product.engineType" name="engineType">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Engine Horse Power</mat-label>
+                    <input matInput placeholder="Engine Horse Power" [(ngModel)]="product.engineHorsePower"
+                        name="engineHorsePower">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Transmission</mat-label>
+                    <input matInput placeholder="Transmission" [(ngModel)]="product.transmission" name="transmission">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Trunk Capacity</mat-label>
+                    <input matInput placeholder="Trunk Capacity" [(ngModel)]="product.capacity" name="trunkCapacity">
+                </mat-form-field>
+
+
+                <div class="radioButtons">
+                    <div class="card">
+                        <mat-label class="radio-mat-lable">Infotainment System</mat-label>
+                        <mat-radio-group class="radio-group-section" [(ngModel)]="product.isinfotainmentSystem"
+                            name="isinfotainmentSystem">
+                            <mat-radio-button value="true">Yes</mat-radio-button>
+                            <mat-radio-button value="false">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+
+                <div class="radioButtons">
+                    <div class="card">
+                        <mat-label class="radio-mat-lable">Climate Control</mat-label>
+                        <mat-radio-group class="radio-group-section" [(ngModel)]="product.isclimateControl"
+                            name="isclimateControl">
+                            <mat-radio-button value="true">Yes</mat-radio-button>
+                            <mat-radio-button value="false">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+                <div class="radioButtons">
+                    <div class="card">
+                        <mat-label class="radio-mat-lable">Sunroof</mat-label>
+                        <mat-radio-group class="radio-group-section" [(ngModel)]="product.isSunroof" name="isSunroof">
+                            <mat-radio-button value="true">Yes</mat-radio-button>
+                            <mat-radio-button value="false">No</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Extra Features</mat-label>
+                    <textarea matInput placeholder="Extra Features" [(ngModel)]="product.extraFeature"
+                        name="extraFeature"></textarea>
+                    <mat-hint>Keep it under 1000 letters</mat-hint>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Color</mat-label>
+                    <input matInput placeholder="Color" [(ngModel)]="product.color" name="color">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Wheels Type</mat-label>
+                    <input matInput placeholder="Wheels Type" [(ngModel)]="product.wheels" name="wheels">
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Lights Condition</mat-label>
+                    <input matInput placeholder="Lights Condition" [(ngModel)]="product.lighting" name="lighting">
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Overall Condition</mat-label>
+                    <textarea matInput placeholder="Overall Condition" [(ngModel)]="product.overallCondition"
+                        name="overallCondition"></textarea>
+                    <mat-hint>Keep it under 1000 letters</mat-hint>
+                </mat-form-field>
+
+                <div>
+
+                    <div class="dropzone" appDrag (files)="fileDropped($event)">
+                        <div class="text-wrapper">
+                            <div class="centered">
+                                Drag and drop or <a (click)="selectFile.click()" class="anchor-browse">browse</a> a file
+                            </div>
+                        </div>
+                    </div>
+                    <p class="hintText">*Add images one by one</p>
+
+                    <input type="file" multiple value="select" #selectFile (change)="onFileSected($event)"
+                        class="hide-element">
+                </div>
+                <div class="mt-5">
+                    <div class="row">
+                        <mat-grid-list cols="4" rowHeight="1:1">
+                            <mat-grid-tile *ngFor="let file of product.imageResponse; let i = index">
+                                <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                                <img [src]="file.url" width="100px" height="100px">
+                            </mat-grid-tile>
+
+                        </mat-grid-list>
+                    </div>
+
+                </div>
+
+       
+
+                <div align="end">
+                    <button type="submit" mat-raised-button color="warn" class="m-1">Update Product</button>
+                   
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+
+</div>
+<!-- </div> -->
+<!-- <h2 class="text-muted" *ngIf="currentStep === 1">Vehicle Description</h2>
+                    <h2 class="text-muted" *ngIf="currentStep === 2">Engine Details</h2>
+                    <h2 class="text-muted" *ngIf="currentStep === 3">Optional Features</h2>
+                    <h2 class="text-muted" *ngIf="currentStep === 4">Extra Features & Overall Condition</h2>
+                    <h2 class="text-muted" *ngIf="currentStep === 5">Add Images of the Vehicle</h2> -->

@@ -1,0 +1,33 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 10px;
+    /* Add margin between cards */
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  
+.all-cars-btn {
+  display: flex;
+  justify-content: center;
+  max-width: 200px; /* Adjust the width as needed */
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 22px;
+  background: #d90429;
+  color: #fff;
+  font-weight: 400;
+}
+
+.btn:hover {
+  background: #fd052f;
+}

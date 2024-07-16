@@ -1,0 +1,8 @@
+<div class="container">
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let fildHandle of data.images">
+            <img [src]="fildHandle.url" alt="">
+        </mat-grid-tile>
+
+      </mat-grid-list>
+</div>

@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand me-auto" href="#">
+      <img src="assets/ToyamaMotorsLogo.png" alt="Toyama Motors Logo" class="img-fluid img-responsive">
+    </a>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">{{'Logo' | translate}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="google_element"></div>
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fs-6" href="/viewAllCars">{{'Cars' | translate}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-6" href="/aboutUs">{{'About' | translate}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-6" href="/ourServices">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-6" href="/showAllBlogs">{{'Our Blogs' | translate}}</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fs-6" href="/viewAllCars">{{'Search Vehicle' | translate}}</a>
+            </li>
+           
+            <li class="nav-item dropdown" *ngIf="isAdmin()">
+              <a class="nav-link dropdown-toggle fs-6" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                {{'Vehicle Management' | translate}}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/addNewProduct">{{'Add Vehicle' | translate}}</a></li>
+                <li><a class="dropdown-item" routerLink="/productDetails">{{'See All Vehicle Details' | translate}}</a></li>
+                <li><a class="dropdown-item" routerLink="/activatedProductDetails">{{'See Active Vehicle Details' | translate}}</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" *ngIf="isAdmin()">
+              <a class="nav-link dropdown-toggle fs-6" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                {{'Blog Management' | translate}}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/addBlog">{{'Add Blog' | translate}}</a></li>
+                <li><a class="dropdown-item" routerLink="/showAllBlogs">{{'See All Blogs' | translate}}</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" *ngIf="isAdmin()">
+              <a class="nav-link dropdown-toggle fs-6" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                {{'User Management' | translate}}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/addUser">{{'Add User' | translate}}</a></li>
+                <li><a class="dropdown-item" routerLink="/userDetails">{{'See All User Details' | translate}}</a></li>
+                <!-- <li><a class="dropdown-item" routerLink="/activatedProductDetails">{{'See Deactive User Details' | translate}}</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item dropdown" *ngIf="isAdmin()">
+              <a class="nav-link dropdown-toggle fs-6" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                {{'Other Details' | translate}}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/addMake">{{'Vehicle Company' | translate}}</a></li>
+                <li><a class="dropdown-item" routerLink="/addFuel">{{'Fuel Type' | translate}}</a></li>
+                <li><a class="dropdown-item" routerLink="/addBodyType">{{'Body Type' | translate}}</a></li>
+                <li><a class="dropdown-item" routerLink="/contact">Add Contact</a></li>
+                <!-- <li><a class="dropdown-item" routerLink="/addUser">{{'Add User' | translate}}</a></li> -->
+              </ul>
+            </li>
+           
+                <!-- <li>{{'Japanese' | translate}}</li> -->
+                <!-- <li></li> -->
+                <!-- <li><a class="dropdown-item" routerLink="/addUser">{{'Add User' | translate}}</a></li> -->
+              </ul>
+          
+          </ul>
+
+      
+      </div>
+    </div>
+    <button *ngIf="!isLoggedIn()" class="loggin-button btn all-cars-btn" routerLink="/login">
+      {{'Login' | translate}}
+    </button>
+    <button *ngIf="isLoggedIn()" class="loggin-button btn all-cars-btn" (click)="logOut()">
+      {{'Logout' | translate}}
+    </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>

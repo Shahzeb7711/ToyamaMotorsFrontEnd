@@ -1,0 +1,31 @@
+.sideBar {
+    height: 750px;
+    border: 2px solid #eee;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* .apphead {
+   
+} */
+
+/* .ftor {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} */
+
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.router-container {
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+    margin-top: 50px;
+    /* Adjust this value as needed */
+}

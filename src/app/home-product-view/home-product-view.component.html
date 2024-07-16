@@ -1,0 +1,147 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="text-center">
+                <div class="card main-card">
+                    <!-- Main image -->
+                    <img [src]="product.imageResponse[productIndex].url" alt="" class="img-fluid main-image">
+                    <!-- Thumbnails Slider -->
+                    <div class="images-container">
+                        <div class="thumbnail-slider">
+                            <div *ngFor="let file of product.imageResponse; let i = index;" class="thumbnail-slide"
+                                [ngClass]="{'active': i === productIndex}">
+                                <img [src]="file.url" alt="Thumbnail {{i}}" class="img-fluid thumbnail-image"
+                                    (click)="changeIndex(i)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="text-area">
+                <div class="product-name">
+                    <p>{{product.makeName}} {{product.productName}}</p>
+                </div>
+
+                <div class="text-muted">
+                    <p>{{product.productDescription}}</p>
+                    <hr>
+                    <!-- <h3 class="price"> <mat-icon>currency_yen</mat-icon> <p class="desc-text-price">{{product.productDiscountedPrice}}</p> &nbsp; &nbsp; <p class="desc-text-price text-decoration-line-through" ><mat-icon>currency_yen</mat-icon>{{product.productActualPrice}}</p></h3> -->
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Discounted Price: </li>
+                        <li class="list-inline-item desc-text-price">{{product.productDiscountedPrice}}</li>
+                        &nbsp;
+                        <li class="list-inline-item desc-text">Actual Price: </li>
+                        <li class="list-inline-item text-decoration-line-through desc-text-price ">
+                            <mat-icon>currency_yen</mat-icon>{{product.productActualPrice}}
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="other-deatils">
+
+                    <h2>Vehicle Description</h2>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Manufacturer: </li>
+                        <li class="list-inline-item">{{product.makeName}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Year: </li>
+                        <li class="list-inline-item">{{product.yearOfManufacture}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Body Type: </li>
+                        <li class="list-inline-item" ><abbr [title]="bodyType.descriptionOfBodyType">{{product.bodyType}}</abbr></li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Color: </li>
+                        <li class="list-inline-item">{{product.color}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Wheels Type: </li>
+                        <li class="list-inline-item">{{product.wheels}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Seating Capacity: </li>
+                        <li class="list-inline-item">{{product.seater}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Lights Condition: </li>
+                        <li class="list-inline-item">{{product.lighting}}</li>
+                    </ul>
+
+                    <hr>
+                    <h2>Engine Details</h2>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Engine Type: </li>
+                        <li class="list-inline-item">{{product.engineType}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Horse Power: </li>
+                        <li class="list-inline-item">{{product.engineHorsePower}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Transmission: </li>
+                        <li class="list-inline-item">{{product.transmission}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Fuel Type: </li>
+                        <li class="list-inline-item">{{product.fuelType}}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Mileage: </li>
+                        <li class="list-inline-item">{{product.mileage}} kmpl</li>
+                    </ul>
+                    <hr>
+                    <h2>Optional Items</h2>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Infotainment System: </li>
+                        <li class="list-inline-item">{{ product.isinfotainmentSystem ? 'Yes' : 'No' }}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Climate Control: </li>
+                        <li class="list-inline-item">{{ product.isclimateControl ? 'Yes' : 'No' }}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li class="list-inline-item desc-text">Sunroof: </li>
+                        <li class="list-inline-item">{{ product.isSunroof ? 'Yes' : 'No' }}</li>
+                    </ul>
+                    <hr>
+                    <h2> Some added features</h2>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <!-- <p class="desc-text">Extra Feature</p> -->
+                                    Extra feature
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            {{ product.extraFeature}}
+                        </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <hr>
+
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <!-- <p class="desc-text">Overall Condition</p> -->
+                                    Overall Condition
+                                </mat-panel-title>
+                                <mat-panel-description>
+
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            {{ product.overallCondition}}
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+            </div>
+        </div>
+    </div>

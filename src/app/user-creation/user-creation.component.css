@@ -1,0 +1,21 @@
+.login-btn {
+    max-width: 200px;
+}
+
+.btn {
+    padding: 10px 22px;
+    background: #d90429;
+    color: #fff;
+    font-weight: 400;
+  }
+  
+  .btn:hover {
+    background: #fd052f;
+  }
+
+  .mainHeading{
+    color: #fd052f;
+    font-size: larger;
+    text-shadow: rgb(77, 76, 76);
+    text-decoration: wavy;
+  }

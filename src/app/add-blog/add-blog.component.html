@@ -1,0 +1,61 @@
+<div class="container-fluid mt-5 ">
+    <div class="card p-2">
+
+
+        <form #blogForm="ngForm" (ngSubmit)="addBlog(blogForm)" class="form-card">
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Blog Name</mat-label>
+                <input matInput placeholder="Blog name" [(ngModel)]="blog.blogName" name="blogName">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Blog Title</mat-label>
+                <input matInput placeholder="Blog Title" [(ngModel)]="blog.blogTitle" name="blogTitle">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Para 1</mat-label>
+                <textarea matInput placeholder="blogContent" [(ngModel)]="blog.blogContent" name="blogContent"></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Para 2</mat-label>
+                <textarea matInput placeholder="Para 2" [(ngModel)]="blog.para2" name="para2"></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Para 3</mat-label>
+                <textarea matInput placeholder="Para 3" [(ngModel)]="blog.para3" name="para3"></textarea>
+            </mat-form-field>
+
+            <p>Add Images for the blog</p>
+            <div class="container">
+                <div class="dropzone" appDrag (files)="fileDropped($event)">
+                    <div class="text-wrapper">
+                        <div class="centered">
+                            Drag and drop or <a (click)="selectFile.click()" class="anchor-browse">browse</a> a
+                            file
+                        </div>
+                    </div>
+                </div>
+                <p class="hintText">*Add images one by one</p>
+
+                <input type="file" multiple value="select" #selectFile (change)="onFileSected($event)"
+                    class="hide-element">
+            </div>
+            <div class="mt-5">
+                <div class="row">
+                    <mat-grid-list cols="4" rowHeight="1:1">
+                        <mat-grid-tile *ngFor="let file of blog.imageResponse; let i = index">
+                            <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                            <img [src]="file.url" width="100px" height="100px">
+                        </mat-grid-tile>
+
+                    </mat-grid-list>
+                </div>
+
+            </div>
+            <div align="end">
+                <button type="submit" mat-raised-button color="warn" class="m-1">Add Blog</button>
+                <!-- <button type="reset" mat-raised-button color="primary">Clear</button> -->
+            </div>
+        </form>
+    </div>
+
+</div>

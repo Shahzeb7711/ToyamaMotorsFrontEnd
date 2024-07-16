@@ -1,0 +1,81 @@
+mat-grid-tile {
+    border: 1px solid #eee;
+}
+
+.btn-remove-image{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: auto;
+    text-align: center;
+}
+
+.dropzone {
+    height: 250px;
+    min-width: 100px;
+    display: table;
+    background-color: #eee;
+    width: 500px;
+    border: dashed 1px #aaa;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.centered {
+    text-align: center;
+}
+
+.hide-element {
+    display: none;
+}
+
+.anchor-browse {
+    color: blue;
+    cursor: pointer;
+} 
+
+.radio-mat-lable {
+    margin: 5px;
+    margin-left: 10px;
+    font-size: larger;
+    color: #717171;
+}
+
+.radio-group-section {
+    padding: 5px;
+}
+
+.radioButtons {
+    margin-bottom: 20px;
+}
+
+.hintText {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card {
+    border: #DB162F solid 0.5px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.form-card  {
+    padding: 30px;
+}
+
+.step-button {
+    margin-right: 10px;
+    margin-top: 20px;
+}

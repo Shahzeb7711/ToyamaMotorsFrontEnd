@@ -1,0 +1,140 @@
+/* .space-buttons {
+    flex: 1 1 auto;
+}
+
+.navbar-wid{
+    width: 100%;
+}
+
+.nv-height {
+    height: 60px;
+}
+
+.body {
+    margin-bottom: 40px;;
+}
+
+.dropdown-menu {
+    margin-top: 0; /* Reset default margin 
+  } */
+
+  .navbar {
+    background: transparent;
+    height: 80px;
+    /* margin: 20px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    /* border-radius: 50px; */
+    padding: 0.5rem;
+  }
+  
+  .navbar-brand {
+    font-weight: 500;
+    /* color: #DB162F; */
+    color : #fff;
+    font-size: 24px;
+  }
+
+.login-button {
+    /* background-color: #3B1F2B; */
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+
+}
+
+
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.2rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    /* color: #666777; */
+    color :  #d90429;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ff0000;
+}
+
+/* @media(min-width: 991px) { */
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #ff0000;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+ /* Customize logo size for small screens */
+ @media (max-width: 576px) {
+    .navbar-brand {
+      margin-right: auto; /* Move the logo to the left */
+      margin-left: 0; /* Reset left margin */
+    }
+
+    .navbar-brand img {
+      max-width: 55px; /* Adjust the maximum width as needed */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 10px; /* Add some right margin for spacing */
+    }
+  }
+
+  /* Customize logo size for medium screens */
+  @media (min-width: 576px) and (max-width: 992px) {
+    .navbar-brand img {
+      max-width: 75px; /* Adjust the maximum width as needed */
+    }
+  }
+
+  /* Customize logo size for large screens */
+  @media (min-width: 992px) {
+    .navbar-brand img {
+      max-width: 75px; /* Adjust the maximum width as needed */
+    }
+  }
+
+  .login-btn {
+    max-width: 200px;
+}
+
+.btn {
+    padding: 10px 22px;
+    background: #d90429;
+    color: #fff;
+    font-weight: 400;
+  }
+  
+  .btn:hover {
+    background: #fd052f;
+  }
+
+  select {
+    border: none;
+    width: fit-content;
+    width: 100%;
+  }

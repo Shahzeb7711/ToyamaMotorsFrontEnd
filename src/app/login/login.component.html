@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="heading">
+        <div>
+            <img src="assets/ToyamaMotorsLogo.png" alt="" class="img-fluid" width="300">
+        </div>
+        <h1>Welcome to Toyama <span>Motors</span></h1>
+    </div>
+    <div class="card loginCard">
+        <p>Login</p>
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Username</mat-label>
+                <input ngModel name="username" id="username" matInput placeholder="Enter user name here">
+                <!-- <mat-hint>Enter your username</mat-hint> -->
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100" [color]="'warn'">
+                <mat-label>Password</mat-label>
+                <input ngModel name="password" id="password" matInput placeholder="Enter password here" type="password">
+                <!-- <mat-hint>Enter your password</mat-hint> -->
+            </mat-form-field >
+            <button type="submit"  class="btn login-btn">Login</button>
+        </form>        
+    </div>
+    <div class="btn all-cars-btn">
+        <a (click)="sigupRouter()">Sign Up</a>
+      </div>
+</div>
