@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { UserAuthService } from './user-auth.service';
 import { Observable, catchError, tap, throwError } from 'rxjs';
 import { UserEntity } from '../_model/user.model';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable()
 export class UserService {
