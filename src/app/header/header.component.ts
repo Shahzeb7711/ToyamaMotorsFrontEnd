@@ -9,6 +9,7 @@ import { ShowActivatedDeatilsComponent } from '../show-activated-deatils/show-ac
 import { TranslateService } from '@ngx-translate/core';
 import { createPopper } from '@popperjs/core';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -32,6 +33,16 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'en';
+
+    const dropdownElements = document.querySelectorAll('.dropdown-toggle');
+    dropdownElements.forEach(dropdownToggle => {
+      const dropdownMenu = dropdownToggle.nextElementSibling as HTMLElement | null;
+      if (dropdownToggle && dropdownMenu) {
+        createPopper(dropdownToggle, dropdownMenu, {
+          placement: 'bottom-start',
+        });
+      }
+    });
   }
 
   public isLoggedIn() {
