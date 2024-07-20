@@ -1,14 +1,15 @@
 # Deny access to all .htaccess files
 <Files .htaccess>
     Order allow,deny
-    Deny from all
+    <!-- Deny from all -->
+    Allow from 216.24.57.1
 </Files>
 
 # Allow access to specific IP addresses (optional)
 # Replace '216.24.57.1' with the actual IP address you want to allow
 <Limit GET POST>
     Order deny,allow
-    Deny from all
+    <!-- Deny from all -->
     Allow from 216.24.57.1
 </Limit>
 
