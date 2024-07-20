@@ -23,3 +23,19 @@ Options -Indexes
 
 # Enable FollowSymLinks
 Options +FollowSymLinks
+
+# Redirect all HTTP requests to HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Optional: Redirect www to non-www or vice versa
+# Uncomment and use only one of the following if needed
+
+# Redirect non-www to www
+# RewriteCond %{HTTP_HOST} !^www\.
+# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirect www to non-www
+# RewriteCond %{HTTP_HOST} ^www\.
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
